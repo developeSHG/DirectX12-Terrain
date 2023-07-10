@@ -89,7 +89,7 @@ shared_ptr<Scene> SceneManager::LoadTestScene()
 #pragma endregion
 
 	shared_ptr<Scene> scene = make_shared<Scene>();
-	
+
 #pragma region Camera
 	{
 		shared_ptr<GameObject> camera = make_shared<GameObject>();
@@ -101,7 +101,7 @@ shared_ptr<Scene> SceneManager::LoadTestScene()
 		uint8 layerIndex = GET_SINGLE(SceneManager)->LayerNameToIndex(L"UI");
 		camera->GetCamera()->SetCullingMaskLayerOnOff(layerIndex, true); // UI´Â ¾È ÂïÀ½
 		scene->AddGameObject(camera);
-	}	
+	}
 #pragma endregion
 
 #pragma region UI_Camera
@@ -143,7 +143,7 @@ shared_ptr<Scene> SceneManager::LoadTestScene()
 #pragma endregion
 
 #pragma region Object
-	{
+	/*{
 		shared_ptr<GameObject> obj = make_shared<GameObject>();
 		obj->AddComponent(make_shared<Transform>());
 		obj->GetTransform()->SetLocalScale(Vec3(100.f, 100.f, 100.f));
@@ -160,7 +160,7 @@ shared_ptr<Scene> SceneManager::LoadTestScene()
 		}
 		obj->AddComponent(meshRenderer);
 		scene->AddGameObject(obj);
-	}
+	}*/
 #pragma endregion
 
 #pragma region Plane
@@ -232,6 +232,26 @@ shared_ptr<Scene> SceneManager::LoadTestScene()
 		light->GetLight()->SetSpecular(Vec3(0.1f, 0.1f, 0.1f));
 
 		scene->AddGameObject(light);
+	}
+#pragma endregion
+
+#pragma region Tessellation Test
+	{
+		shared_ptr<GameObject> gameObject = make_shared<GameObject>();
+		gameObject->AddComponent(make_shared<Transform>());
+		gameObject->GetTransform()->SetLocalPosition(Vec3(0, 0, 300));
+		gameObject->GetTransform()->SetLocalScale(Vec3(100, 100, 100));
+		gameObject->GetTransform()->SetLocalRotation(Vec3(0, 0, 0));
+
+		shared_ptr<MeshRenderer> meshRenderer = make_shared<MeshRenderer>();
+		{
+			shared_ptr<Mesh> mesh = GET_SINGLE(Resources)->LoadRectangleMesh();
+			meshRenderer->SetMesh(mesh);
+			meshRenderer->SetMaterial(GET_SINGLE(Resources)->Get<Material>(L"Tessellation"));
+		}
+		gameObject->AddComponent(meshRenderer);
+
+		scene->AddGameObject(gameObject);
 	}
 #pragma endregion
 
