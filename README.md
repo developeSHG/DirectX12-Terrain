@@ -11,11 +11,11 @@
 <br><b>History</b> : https://github.com/developeSHG/DirectX12-Terrain/commits/01.Tessellation
 
 <br><h3>Chapter 02. Terrain</h3>
-<img width="90%" src="https://user-images.githubusercontent.com/79896868/254775790-c45bb701-8e40-4311-8e35-0fb776bc3b48.png"/>
-<b>Blog</b> : https://song-ift.tistory.com/451
+![ezgif com-video-to-gif](https://github.com/developeSHG/DirectX12-Camera_Lighting/assets/79896868/0222ac80-996c-424b-8664-53188cab9582)
+<br><b>Blog</b> : https://song-ift.tistory.com/451
 <br><b>History</b> : https://github.com/developeSHG/DirectX12-Terrain/commits/02.Terrain
 
-<br><h3>Chapter 03. Terrain</h3>
-<img width="90%" src="https://user-images.githubusercontent.com/79896868/254775814-afa26e9f-d801-4867-baaa-f61484667159.png"/>
-<b>Blog</b> : https://song-ift.tistory.com/452
+<br><h3>Chapter 03. Picking</h3>
+![ezgif com-video-to-gif (1)](https://github.com/developeSHG/DirectX12-Camera_Lighting/assets/79896868/8c7a3bba-1124-4ffb-b37d-071cac893652)
+<br><b>Blog</b> : https://song-ift.tistory.com/452
 <br><b>History</b> : https://github.com/developeSHG/DirectX12-Terrain/commits/03.Picking
